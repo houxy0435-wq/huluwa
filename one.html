@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="msvalidate.01" content="B28B0DB1C06F4CC5DB4ED22E6C7DF9CA" />
+<title>账号展示区 - 葫芦娃手游代打</title>
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Microsoft YaHei",sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+html, body {
+  width:100%;
+  overflow-x:hidden;
+}
+body{
+  background-color:#f6f8fa;
+  color:#333;
+  line-height:1.8;
+  padding-top: calc(70px + 32px);
+}
+
+/* 顶栏导航 */
+.top-nav{
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background:#fff;
+  box-shadow:0 2px 12px rgba(0,0,0,0.06);
+  z-index:999;
+}
+.nav-box{
+  max-width:700px;
+  margin:0 auto;
+  display:flex;
+  justify-content:center;
+  height:70px;
+  align-items:center;
+  gap:10px;
+  padding:0 15px;
+  flex-wrap: wrap;
+}
+.nav-box a{
+  text-decoration:none;
+  color:#333;
+  font-size:15px;
+  padding:8px 14px;
+  border-radius:30px;
+  transition:0.2s;
+  white-space: nowrap;
+}
+.nav-box a:hover,.nav-box a.active{
+  background:#4a6cf3;
+  color:#fff;
+}
+
+/* 滚动公告 */
+.marquee{
+  width:100%;
+  background:#fff3cd;
+  color:#856404;
+  padding:8px 0;
+  font-size:13px;
+  overflow:hidden;
+  white-space:nowrap;
+  position:fixed;
+  top:70px;
+  left:0;
+  z-index:998;
+}
+.marquee-content{
+  display:inline-block;
+  animation: marquee 18s linear infinite;
+  padding-left:100%;
+}
+@keyframes marquee {
+  0%{ transform:translateX(0); }
+  100%{ transform:translateX(-100%); }
+}
+
+/* 容器 */
+.container{
+  max-width:700px;
+  margin:30px auto;
+  padding:0 16px;
+}
+.title{
+  text-align:center;
+  font-size:24px;
+  font-weight:600;
+  color:#222;
+  margin-bottom:8px;
+}
+.subtitle{
+  text-align:center;
+  font-size:14px;
+  color:#666;
+  margin-bottom:28px;
+  line-height:1.5;
+}
+
+/* 账号卡片 */
+.account-card{
+  background:#fff;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 4px 15px rgba(0,0,0,0.06);
+  cursor:pointer;
+  transition:0.25s ease;
+}
+.account-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 8px 22px rgba(0,0,0,0.1);
+}
+.cover-img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+.account-info{
+  padding:20px 22px;
+}
+.price{
+  font-size:19px;
+  font-weight:bold;
+  color:#ff6b6b;
+  margin-bottom:8px;
+}
+.account-desc{
+  font-size:14px;
+  color:#555;
+  line-height:1.6;
+}
+
+/* 账号详情 */
+.detail-page{
+  display:none;
+}
+.detail-img-box{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:10px;
+  margin-bottom:25px;
+}
+.detail-img{
+  width:100%;
+  height:auto;
+  border-radius:14px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+.detail-info{
+  background:#eef5ff;
+  padding:22px;
+  border-radius:18px;
+  margin-bottom:25px;
+}
+.detail-info h3{
+  color:#222;
+  margin-bottom:12px;
+  font-size:17px;
+}
+.detail-info p{
+  font-size:14px;
+  color:#444;
+  line-height:1.8;
+  margin-bottom:4px;
+}
+.back-btn{
+  background:#4a6cf3;
+  color:#fff;
+  border:none;
+  padding:10px 20px;
+  border-radius:30px;
+  font-size:14px;
+  cursor:pointer;
+  margin-bottom:16px;
+  transition:0.2s;
+}
+.back-btn:hover{
+  background:#3a5ce0;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 顶部导航 -->
+<div class="top-nav">
+  <div class="nav-box">
+    <a href="index.html">服务专区</a>
+    <a href="one.html" class="active">账号展示区</a>
+    <a href="two.html">联系我们</a>
+  </div>
+</div>
+
+<!-- 滚动公告 -->
+<div class="marquee">
+  <div class="marquee-content">
+    目前的游戏账号还未上架，在货架上的账号仅用于测试，正在筹备中，敬请期待！！！
+  </div>
+</div>
+
+<!-- 账号封面展示 -->
+<div class="list-page" id="listPage">
+  <div class="container">
+    <div class="title">账号展示区</div>
+    <div class="subtitle">葫芦娃手游精品账号 | 安全交易 | 实拍图片</div>
+
+    <div class="account-card" onclick="showDetail()">
+      <img src="photos/one/7.jpg" class="cover-img" alt="账号封面">
+      <div class="account-info">
+        <div class="price">售价：500元</div>
+        <div class="account-desc">小Y安卓苹果互通 | 二阶大象 | 二阶鱼 | 二阶孟极</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 账号详情页面 -->
+<div class="detail-page" id="detailPage">
+  <div class="container">
+    <button class="back-btn" onclick="hideDetail()">← 返回账号列表</button>
+    
+    <div class="title">账号详情</div>
+    <div class="subtitle">实拍图片 | 完整信息</div>
+
+    <div class="detail-info">
+      <h3>账号信息</h3>
+      <p>参考售价：500元</p>
+      <p>区服：S12.</p>
+      <p>系统：小Y安卓苹果互通</p>
+      <p>神兽：二阶大象、二阶鱼、二阶孟极</p>
+      <p>排名：武斗26名</p>
+    </div>
+
+    <div class="detail-img-box">
+        <img src="photos/one/1.jpg" class="detail-img">
+        <img src="photos/one/2.jpg" class="detail-img">
+        <img src="photos/one/3.jpg" class="detail-img">
+        <img src="photos/one/4.jpg" class="detail-img">
+        <img src="photos/one/5.jpg" class="detail-img">
+        <img src="photos/one/6.jpg" class="detail-img">
+        <img src="photos/one/7.jpg" class="detail-img">
+    </div>
+  </div>
+</div>
+
+<script>
+function showDetail(){
+  document.getElementById('listPage').style.display = 'none';
+  document.getElementById('detailPage').style.display = 'block';
+}
+function hideDetail(){
+  document.getElementById('detailPage').style.display = 'none';
+  document.getElementById('listPage').style.display = 'block';
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="msvalidate.01" content="B28B0DB1C06F4CC5DB4ED22E6C7DF9CA" />
+<title>联系我们 - 葫芦娃手游代打</title>
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Microsoft YaHei",sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+html, body {
+  width:100%;
+  overflow-x:hidden;
+}
+body{
+  background:#f6f8fa;
+  color:#333;
+  line-height:1.8;
+  padding-top: calc(70px + 32px);
+}
+
+/* 顶部固定导航 */
+.top-nav{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background:#fff;
+  box-shadow:0 2px 10px rgba(0,0,0,0.06);
+  z-index:999;
+}
+.nav-box{
+  max-width:700px;
+  margin:0 auto;
+  display:flex;
+  justify-content:center;
+  height:70px;
+  align-items:center;
+  gap:10px;
+  padding:0 15px;
+  flex-wrap: wrap;
+}
+.nav-box a{
+  text-decoration:none;
+  color:#333;
+  font-size:15px;
+  padding:8px 14px;
+  border-radius:30px;
+  transition:0.2s;
+  white-space: nowrap;
+}
+.nav-box a:hover,.nav-box a.active{
+  background:#4a6cf3;
+  color:#fff;
+}
+
+/* 滚动公告 */
+.marquee{
+  width:100%;
+  background:#fff3cd;
+  color:#856404;
+  padding:8px 0;
+  font-size:13px;
+  overflow:hidden;
+  white-space:nowrap;
+  position:fixed;
+  top:70px;
+  left:0;
+  z-index:998;
+}
+.marquee-content{
+  display:inline-block;
+  animation: marquee 18s linear infinite;
+  padding-left:100%;
+}
+@keyframes marquee {
+  0%{ transform:translateX(0); }
+  100%{ transform:translateX(-100%); }
+}
+
+.container{
+  max-width:700px;
+  margin:30px auto;
+  padding:0 16px;
+}
+.title{
+  text-align:center;
+  font-size:24px;
+  font-weight:600;
+  color:#222;
+  margin-bottom:8px;
+}
+.subtitle{
+  text-align:center;
+  font-size:14px;
+  color:#666;
+  margin-bottom:28px;
+  line-height:1.5;
+}
+
+.card{
+  background:#fff;
+  border-radius:22px;
+  padding:36px 24px;
+  box-shadow:0 6px 22px rgba(0,0,0,0.06);
+  text-align:center;
+}
+.wx-label{
+  font-size:16px;
+  color:#333;
+  font-weight:500;
+  margin-bottom:6px;
+}
+.wx-tip{
+  font-size:13px;
+  color:#888;
+  margin-bottom:20px;
+}
+.qrcode{
+  width:220px;
+  height:220px;
+  margin:0 auto 24px;
+  cursor:pointer;
+}
+.qrcode img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:14px;
+  box-shadow:0 2px 12px rgba(0,0,0,0.08);
+}
+.contact-item{
+  font-size:15px;
+  color:#444;
+  margin:10px 0;
+  cursor:pointer;
+  transition:0.2s;
+  position:relative;
+  padding: 8px 0;
+}
+.contact-item:hover{
+  color:#4a6cf3;
+}
+.contact-item span{
+  font-weight:600;
+  color:#222;
+}
+.copy-tip{
+  position:absolute;
+  right:10px;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:12px;
+  color:#999;
+  padding:2px 6px;
+  background:#f5f5f5;
+  border-radius:4px;
+}
+.desc{
+  margin-top:28px;
+  padding:16px 18px;
+  background:#eef5ff;
+  border-radius:14px;
+  font-size:14px;
+  color:#555;
+  line-height:1.7;
+}
+
+.modal{
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.9);
+  z-index:9999;
+  align-items:center;
+  justify-content:center;
+}
+.modal img{
+  max-width:90%;
+  max-height:90%;
+  border-radius:12px;
+}
+.toast{
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background:rgba(0,0,0,0.7);
+  color:#fff;
+  padding:10px 18px;
+  border-radius:8px;
+  font-size:14px;
+  z-index:99999;
+  display:none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 顶部导航 -->
+<div class="top-nav">
+  <div class="nav-box">
+    <a href="index.html">服务专区</a>
+    <a href="one.html">账号展示区</a>
+    <a href="two.html" class="active">联系我们</a>
+  </div>
+</div>
+
+<!-- 滚动公告 -->
+<div class="marquee">
+  <div class="marquee-content">
+    该网站处于开发阶段，如有更好的建议欢迎提出，我们会进行升级，谢谢大家的支持！
+  </div>
+</div>
+
+<div class="container">
+  <div class="title">联系我们</div>
+  <div class="subtitle">葫芦娃手游代打 | 账号交易 | 安全高效</div>
+
+  <div class="card">
+    <div class="wx-label">微信咨询</div>
+    <div class="wx-tip">点击图片放大 · 长按保存图片</div>
+    <div class="qrcode" onclick="openModal()">
+      <img src="image/wx.jpg" alt="微信二维码">
+    </div>
+
+    <div class="contact-item" onclick="copyQQ()">
+      QQ：<span>264785174</span>
+      <span class="copy-tip">点击复制</span>
+    </div>
+    <div class="contact-item" onclick="copyWX()">
+      微信：<span>MOMOLUORU</span>
+      <span class="copy-tip">点击复制</span>
+    </div>
+
+    <div class="desc">
+      加好友请备注：葫芦娃代打 / 账号咨询<br>
+      全天在线接单，人工代打，安全可靠
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="imgModal" onclick="closeModal()">
+  <img src="image/wx.jpg" alt="">
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+function openModal(){document.getElementById("imgModal").style.display="flex"}
+function closeModal(){document.getElementById("imgModal").style.display="none"}
+function showToast(msg){const t=document.getElementById('toast');t.innerText=msg;t.style.display='block';setTimeout(()=>t.style.display='none',1500)}
+function copyQQ(){const i=document.createElement('input');i.value='264785174';document.body.appendChild(i);i.select();document.execCommand('copy');document.body.removeChild(i);showToast('复制QQ号成功')}
+function copyWX(){const i=document.createElement('input');i.value='MOMOLUORU';document.body.appendChild(i);i.select();document.execCommand('copy');document.body.removeChild(i);showToast('复制微信号成功')}
+</script>
+</body>
+</html>
